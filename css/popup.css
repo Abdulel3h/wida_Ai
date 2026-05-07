@@ -17,7 +17,7 @@
 
 .notes-popup {
     position: absolute;
-    z-index: 100;
+    z-index: 100000;
     width: 360px;
     max-width: 280px;
     max-height: 70vh;
