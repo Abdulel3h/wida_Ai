@@ -1,0 +1,61 @@
+.projects-skeletons {
+    display: grid;
+    gap: 24px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.project-card-skeleton {
+    background: rgba(30, 25, 35, 0.35);
+    border: 1px solid rgba(145, 104, 234, 0.15);
+    border-radius: var(--radius-lg);
+    padding: 40px 32px;
+    min-height: 400px;
+    box-shadow: var(--shadow-card);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card-skeleton::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.08) 50%, rgba(255, 255, 255, 0) 100%);
+    transform: translateX(-100%);
+    animation: skeletonShimmer 1.4s infinite ease-in-out;
+}
+
+.skeleton-head,
+.skeleton-line {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    margin-bottom: 18px;
+}
+
+.skeleton-head {
+    width: 120px;
+    height: 30px;
+}
+
+.skeleton-line {
+    height: 16px;
+}
+
+.skeleton-line.short {
+    width: 40%;
+}
+
+.skeleton-line.half {
+    width: 55%;
+}
+
+@keyframes skeletonShimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}

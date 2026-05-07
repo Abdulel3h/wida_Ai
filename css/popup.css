@@ -1,0 +1,169 @@
+.notes-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 99990;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.notes-backdrop.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.notes-popup {
+    position: absolute;
+    z-index: 100;
+    width: 360px;
+    max-width: 280px;
+    max-height: 70vh;
+    background: rgba(18, 14, 26, 0.97);
+    border: 1px solid rgba(145, 104, 234, 0.45);
+    border-radius: 18px;
+    padding: 20px 20px 20px 20px;
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.75),
+        0 0 0 1px rgba(145, 104, 234, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(145, 104, 234, 0.3) rgba(15, 14, 14, 0.5);
+    visibility: hidden;
+    pointer-events: none;
+    transform: scale(0.88) translateY(8px);
+    transform-origin: top right;
+    transition:
+        visibility 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.notes-popup.open {
+    visibility: visible;
+    pointer-events: all;
+    transform: scale(1) translateY(0);
+}
+
+.notes-popup::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgba(18, 14, 26, 0.97);
+    border: 1px solid rgba(145, 104, 234, 0.45);
+    border-radius: 2px;
+    transform: rotate(45deg);
+    top: -6px;
+    right: var(--arrow-right, 18px);
+    border-bottom: none;
+    border-left: none;
+}
+
+.notes-popup.arrow-bottom::before {
+    top: auto;
+    bottom: -6px;
+    border: 1px solid rgba(145, 104, 234, 0.45);
+    border-top: none;
+    border-right: none;
+}
+
+.notes-popup-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.notes-popup-title {
+    font-family: 'Cairo', sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--wida-primary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.notes-popup-close {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s;
+    flex-shrink: 0;
+}
+
+.notes-popup-close:hover {
+    background: rgba(145, 104, 234, 0.25);
+    border-color: rgba(145, 104, 234, 0.6);
+    color: #fff;
+    transform: rotate(90deg);
+}
+
+.notes-popup-criteria {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.6;
+    margin-bottom: 14px;
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.025);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    direction: rtl;
+}
+
+.notes-popup-item {
+    margin-bottom: 12px;
+}
+
+.notes-popup-item:last-child {
+    margin-bottom: 0;
+}
+
+.notes-popup-evaluator {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.notes-popup-text {
+    background: rgba(145, 104, 234, 0.06);
+    border: 1px solid rgba(145, 104, 234, 0.18);
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 13px;
+    color: #fff;
+    line-height: 1.75;
+    direction: rtl;
+}
+
+.notes-popup::-webkit-scrollbar {
+    width: 4px;
+}
+
+.notes-popup::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.notes-popup::-webkit-scrollbar-thumb {
+    background: rgba(145, 104, 234, 0.3);
+    border-radius: 4px;
+}

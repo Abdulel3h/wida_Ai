@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="منصة تحديث المشاريع من ويدا - تابع أحدث التطورات في مشاريعنا التقنية والإعلامية">
+    <meta name="theme-color" content="#9168ea"> <!-- supported in Chrome/Edge/Safari only -->
+    <meta property="og:title" content="Wida Project Updates Platform">
+    <meta property="og:description" content="منصة تحديث المشاريع من ويدا - تابع أحدث التطورات في مشاريعنا التقنية والإعلامية">
+    <meta property="og:image" content="https://abdulel3h.github.io/wida_Ai/wida-logo.png">
+    <meta property="og:url" content="https://abdulel3h.github.io/wida_Ai/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Wida Project Updates Platform">
+    <meta name="twitter:description" content="منصة تحديث المشاريع من ويدا - تابع أحدث التطورات في مشاريعنا التقنية والإعلامية">
+    <meta name="twitter:image" content="https://abdulel3h.github.io/wida_Ai/wida-logo.png">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https:;">
+    <title>Wida Project Updates Platform</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%230f0e0e' width='180' height='180'/><circle cx='90' cy='90' r='70' fill='%239168ea'/><circle cx='90' cy='90' r='50' fill='%23dc8dd9'/><circle cx='90' cy='90' r='30' fill='%23e6c8fe'/></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%230f0e0e' width='180' height='180'/><circle cx='90' cy='90' r='70' fill='%239168ea'/><circle cx='90' cy='90' r='50' fill='%23dc8dd9'/><circle cx='90' cy='90' r='30' fill='%23e6c8fe'/></svg>">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Cairo:wght@300;400;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js" defer>
+    </script>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/overlay.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/cursor.css">
+    <link rel="stylesheet" href="css/eval.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- Background layers -->
+    <div class="bg-orb orb1"></div>
+    <div class="bg-orb orb2"></div>
+    <div class="bg-orb orb3"></div>
+    <div class="noise-overlay"></div>
+    <div class="grid-texture"></div>
+
+    <!-- Back button -->
+    <button type="button" class="back-btn" id="backBtn" onclick="goBack()" aria-label="العودة للرئيسية" title="العودة للرئيسية">✕</button>
+
+    <!-- Main Platform View -->
+    <div class="main-container" id="mainView">
+        <header class="platform-header">
+            <div class="wida-logo-wrap">
+                <img src="wida-logo.png" alt="شعار شركة ويدا للذكاء الاصطناعي" class="wida-logo-img">
+            </div>
+            <div class="platform-name-en">Wida Project Updates Platform</div>
+            <div class="platform-subtitle">منصة تحديث المشاريع</div>
+            <div class="header-line"></div>
+        </header>
+        <div class="tagline-strip">A Wida perspective for a smarter experience</div>
+
+        <section class="projects-skeletons" id="skeletonSection" aria-hidden="true">
+            <article class="project-card-skeleton">
+                <div class="skeleton-head"></div>
+                <div class="skeleton-line short"></div>
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line half"></div>
+            </article>
+            <article class="project-card-skeleton">
+                <div class="skeleton-head"></div>
+                <div class="skeleton-line short"></div>
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line half"></div>
+            </article>
+        </section>
+
+        <section class="projects-section hide-until-ready">
+            <!-- Project 1: Technical Proposal -->
+            <article class="project-card-wrap" onclick="openProject1(event)" id="card1Wrap" role="button" tabindex="0" aria-labelledby="card1Title">
+                <section class="project-card card-project1" id="card1">
+                    <div class="card-glow"></div>
+                    <div class="card-icon-3d">📋</div>
+                    <div class="card-title-ar" id="card1Title">مشروع العرض الفني</div>
+                    <div class="card-title-en">Technical Proposal</div>
+                    <div class="card-desc">
+                        العمل جاري، ونحن حالياً بانتظار النتائج النهائية لاختبار النماذج لحصر أي تحديات أو مشاكل فيها،
+                        وذلك تمهيداً لتهيئة وتخصيص النظام بالكامل ليتوافق مع النموذج النهائي الذي سيقع عليه الاختيار.
+                        <br><br>
+                        <strong class="accent-light-text">✨ ظهرت النتائج وتمت برمجتها في ملف
+                            التقييم</strong>
+                    </div>
+                    <div class="card-meta-row">
+                        <span class="card-status status-inprogress">
+                            <span class="status-dot"></span> جاري العمل
+                        </span>
+                    </div>
+                    <div class="progress-row">
+                        <span class="progress-label">نسبة الإنجاز</span>
+                        <div class="progress-track" aria-hidden="true">
+                            <div class="progress-fill progress-fill-72"></div>
+                        </div>
+                        <span class="progress-value">72%</span>
+                    </div>
+                    <div class="updated-at">آخر تحديث: 05 مايو 2026</div>
+                    <div class="card-action-hint">👆 عرض كتاب التقييم PDF</div>
+                </section>
+            </article>
+
+            <!-- Project 2: Presentations -->
+            <article class="project-card-wrap" onclick="openProject2(event)" id="card2Wrap" role="button" tabindex="0" aria-labelledby="card2Title">
+                <section class="project-card card-project2" id="card2">
+                    <div class="card-glow"></div>
+                    <div class="card-icon-3d">📽️</div>
+                    <div class="card-title-ar" id="card2Title">مشروع العروض التقديمية</div>
+                    <div class="card-title-en">Presentations</div>
+                    <div class="card-desc">
+                        واجهت مؤخراً بعض التحديات التقنية في المشروع، وجاري العمل حالياً على البحث عن الحلول المناسبة
+                        لمعالجتها. فريقنا الفني يعمل على تحليل المشكلات وإيجاد أفضل الممارسات لحلها بأسرع وقت ممكن.
+                    </div>
+                    <div class="card-meta-row">
+                        <span class="card-status status-issue">
+                            <span class="status-dot"></span> تحديات تقنية
+                        </span>
+                    </div>
+                    <div class="progress-row">
+                        <span class="progress-label">نسبة الإنجاز</span>
+                        <div class="progress-track" aria-hidden="true">
+                            <div class="progress-fill progress-fill-45"></div>
+                        </div>
+                        <span class="progress-value">45%</span>
+                    </div>
+                    <div class="updated-at">آخر تحديث: 02 مايو 2026</div>
+                    <div class="card-action-hint">👆 عرض تفاصيل المشروع</div>
+                </section>
+            </article>
+        </section>
+    </div>
+
+    <!-- Expanded Overlay -->
+    <div class="expanded-overlay" id="expandedOverlay">
+        <div class="expanded-content" id="expandedContent"></div>
+    </div>
+
+    <!-- Click-away backdrop for notes popup -->
+    <div class="notes-backdrop" id="notesBackdrop" onclick="window._closeEvalModal()"></div>
+
+    <!-- Anchored Notes Popup -->
+    <div class="notes-popup" id="globalEvalModal" role="dialog" aria-label="ملاحظات المقيّمين">
+        <div class="notes-popup-header">
+            <span class="notes-popup-title">📝 <span>ملاحظات المقيّمين</span></span>
+            <button class="notes-popup-close" onclick="window._closeEvalModal()" aria-label="إغلاق">✕</button>
+        </div>
+        <div class="notes-popup-criteria" id="globalModalCriteria"></div>
+        <div id="globalModalNotes"></div>
+    </div>
+
+    <script src="js/tilt.js"></script>
+    <script src="js/ripple.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/overlay.js"></script>
+    <script src="js/eval.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+</body>
+
+</html>

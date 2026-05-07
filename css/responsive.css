@@ -1,0 +1,90 @@
+@media (pointer: fine) {
+    body,
+    a,
+    button,
+    .project-card-wrap,
+    .cat-header,
+    .etab,
+    .ctab,
+    .notes-btn {
+        cursor: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        padding: 40px 16px 80px;
+    }
+
+    .projects-section {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 20px 0;
+    }
+
+    .project-card-wrap {
+        min-width: auto;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .project-card {
+        min-height: 280px;
+        padding: 28px 20px;
+    }
+
+    .card-title-ar {
+        font-size: 22px;
+    }
+
+    .platform-name-en {
+        font-size: 26px;
+    }
+
+    .platform-subtitle {
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    .tagline-strip {
+        font-size: 11px;
+        letter-spacing: 2px;
+        padding: 7px 16px;
+        margin: 8px 0 40px;
+    }
+
+    .back-btn {
+        top: 16px;
+        right: 16px;
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+    }
+
+    .detail-view {
+        margin: 80px 16px 40px;
+        padding: 32px 20px;
+    }
+
+    .detail-view h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-icon-3d {
+        width: 56px;
+        height: 56px;
+        font-size: 26px;
+        margin-bottom: 16px;
+    }
+
+    .card-title-ar {
+        font-size: 20px;
+    }
+
+    .card-desc {
+        font-size: 14px;
+    }
+}
